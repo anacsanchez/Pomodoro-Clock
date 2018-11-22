@@ -1,11 +1,9 @@
 import React from 'react';
-import { Home } from './components';
+import { Clock } from './components';
 
 const App = () => {
   return (
-    <div>
-      <Home />
-    </div>
+    <Clock />
   )
 }
 export default App;
