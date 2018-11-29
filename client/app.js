@@ -3,7 +3,11 @@ import { Clock } from './components';
 
 const App = () => {
   return (
-    <Clock />
+    <div>
+      <div id="title">Pomodoro Clock</div>
+      <Clock />
+    </div>
+
   )
 }
 export default App;

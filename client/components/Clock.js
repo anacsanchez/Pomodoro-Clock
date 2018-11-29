@@ -5,6 +5,8 @@ let timer;
 const defaultBreak = 5;
 const defaultSession = 25;
 
+const active = "#a02222";
+
 class Clock extends Component {
   constructor(props){
     super(props);
@@ -136,12 +138,11 @@ class Clock extends Component {
   render() {
     return (
       <div id="clock">
-        <div id="title">Pomodoro Clock</div>
         <div id="options">
           <Option id="break" length={this.state.break} decrement={this.decrementBreak} increment={this.incrementBreak} />
           <Option id="session" length={this.state.session} decrement={this.decrementSession} increment={this.incrementSession} />
         </div>
-        <Timer reset={this.resetClock} toggle={this.toggleTimer} name={this.state.current} timeLeft={this.state.timeLeft} />
+        <Timer reset={this.resetClock} toggle={this.toggleTimer} name={this.state.current} timeLeft={this.state.timeLeft} active={active} />
       </div>
     )
   }
